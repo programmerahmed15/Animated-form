@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f2f5;
+            margin: 0;
+        }
+        .login-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-form input {
+            width: 250px;
+            padding: 10px 10px 10px 10px;
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            transition: border-color 0.3s;
+        }
+        .login-form input:focus {
+            border-color: #007BFF;
+        }
+        .login-form button {
+            width: 200px;
+            padding: 10px;
+            background: #007BFF;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .login-form button:hover {
+            background: #0056b3;
+        }
+        .login-form button:active {
+            transform: scale(0.95);
+        }
+        .login-form .message {
+            display: none;
+            margin-top: 15px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-form">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" id="username" required>
+        <input type="password" placeholder="Password" id="password" required>
+        <button onclick="login()">Login</button>
+        <div class="message" id="message">Login Successful!</div>
+    </div>
+
+    <script>
+        function login() {
+            // Simulate login process
+            setTimeout(() => {
+                document.getElementById('message').style.display = 'block';
+            }, 500);  // Delay for demo purposes
+        }
+    </script>
+
+</body>
+</html>
